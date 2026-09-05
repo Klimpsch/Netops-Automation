@@ -1,0 +1,24 @@
+- name: Render device configs from host_vars + Jinja template
+  hosts: network
+  connection: local
+  gather_facts: false
+  become: false
+  vars:
+    ansible_connection: local
+    ansible_network_os: ""
+    ansible_become: false
+    ansible_become_method: sudo
+    ansible_python_interpreter: "{{ ansible_playbook_python }}"
+  tasks:
+    - name: Make sure the output folder exists
+      ansible.builtin.file:
+        path: "{{ playbook_dir }}/configs"
+        state: directory
+        mode: "0755"
+      run_once: true
+
+    - name: Generate config for {{ inventory_hostname }}
+      ansible.builtin.template:
+        src: "{{ playbook_dir }}/templates/base.j2"
+        dest: "{{ playbook_dir }}/configs/{{ inventory_hostname }}.cfg"
+        mode: "0640"

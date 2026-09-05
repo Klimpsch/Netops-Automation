@@ -1,0 +1,23 @@
+- name: Push generated configs to devices
+  hosts: network
+  gather_facts: false
+  tasks:
+    - name: Render config to a local file first (for review + idempotent source)
+      ansible.builtin.template:
+        src: "{{ playbook_dir }}/templates/base.j2"
+        dest: "{{ playbook_dir }}/configs/{{ inventory_hostname }}.cfg"
+        mode: "0640"
+      delegate_to: localhost
+      vars:
+        ansible_connection: local
+
+    - name: Apply configuration to device
+      cisco.ios.ios_config:
+        src: "{{ playbook_dir }}/configs/{{ inventory_hostname }}.cfg"
+        save_when: modified          # write mem only if something changed
+      register: cfg_result
+
+    - name: Show what changed on {{ inventory_hostname }}
+      ansible.builtin.debug:
+        var: cfg_result.commands
+      when: cfg_result.commands is defined and cfg_result.commands | length > 0
