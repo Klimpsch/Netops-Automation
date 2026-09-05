@@ -1,4 +1,3 @@
 # Netops-Automation
-# Netops-Automation
-# Netops-Automation
-# Netops-Automation
+
+Collection of netops automation projects
