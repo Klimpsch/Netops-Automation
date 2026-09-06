@@ -51,4 +51,4 @@ Inventory is picked up automatically via `ansible.cfg`.
 | `ansible.cfg` | project settings (points at the inventory) 
 
 ## Topology
-![Network topology](images/topology.png)
+![Network topology](images/Topology.png)
