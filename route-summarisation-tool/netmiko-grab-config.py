@@ -1,11 +1,13 @@
 from netmiko import ConnectHandler
 from netmiko import NetmikoTimeoutException, NetmikoAuthenticationException
 
-""" base logic for the config grab
-"""
+
+                              
 
 arr = ['192.168.0.190']
 def connect_netmiko(host):
+    """ Connect and grab only ospf routes """
+
     device = {
         "device_type": "cisco_ios",
         "host": host,
@@ -22,6 +24,8 @@ def connect_netmiko(host):
     
 
 routing_table = {}
+
+""" base logic for the config grab """
 
 for a in arr:
     output = connect_netmiko(a)
