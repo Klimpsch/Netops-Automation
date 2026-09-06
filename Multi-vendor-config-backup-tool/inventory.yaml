@@ -1,0 +1,16 @@
+- hostname: RTR02
+  ip: 192.168.122.128
+  vendor: cisco_ios
+  username: admin
+- hostname: edge-fw-01
+  ip: 10.0.0.2
+  vendor: paloalto
+  port: 2222
+  username: netadmin
+- hostname: core-sw-01
+  ip: 10.0.0.3
+  vendor: cisco_ios
+- hostname: edge-rtr-01
+  ip: 10.0.0.4
+  vendor: cisco_ios
+  username: admin
