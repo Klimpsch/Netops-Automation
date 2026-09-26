@@ -13,8 +13,12 @@ host = os.getenv("HOST")
 
 csv_data = {}
 
+# Create lists first then assign to dict
+interfaces = []
+ips = []
 
-print(host, username, password)
+
+
 device = {
         "device_type": "cisco_ios",
         "username": username,
@@ -38,8 +42,14 @@ except NetmikoAuthenticationException:
 for item in data:
     for key, value in item.items():
         if 'interface' in key:
-            print(value)
+            interfaces.append(value)
+
         elif 'ip' in key:
-            print(value)
+            ips.append(value) 
 
+csv_data['interfaces'] = interfaces
+csv_data['ip address'] = ips
 
+for item in csv_data.items():
+    for i in item:
+        print(i)
