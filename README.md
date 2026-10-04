@@ -12,11 +12,11 @@ Each tool lives in its own folder and can be used on its own. See the README ins
 
 | Tool | What it does | Built with |
 |------|--------------|------------|
-| [Ansible Automation Basic](./ansible-automation-basic) | Starter Ansible playbooks and inventory for automating network devices | Ansible |
+| [Ansible Automation](./ansible-automation-basic) | Starter Ansible playbooks and inventory for automating network devices | Ansible |
 | [Intent Scraper](./intent-scraper) | Scrapes running configs and extracts BGP, OSPF and EIGRP intent into per-router YAML | Python, Netmiko, CiscoConfParse |
 | [Netmiko to CSV](./netmiko-to-csv) | Runs show commands on devices with Netmiko and exports the results to CSV | Python, Netmiko |
 | [Network Config Compliance Tool](./network-config-compliance-tool) | Checks device configurations against a defined standard and reports what doesn't match | Python |
-| [Route Summarization Tool](./route-summarization-tool) | Calculates summary routes from a list of prefixes | Python |
+| [Route Summarisation Tool](./route-summarization-tool) | Calculates summary routes from a list of prefixes | Python |
 
 ## Repository structure
 
