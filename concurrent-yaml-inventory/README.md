@@ -64,12 +64,10 @@ Edit the settings at the top of the script:
 ```python
 ROUTERS = ['10.0.12.1', '10.0.12.2', '10.0.13.2', '10.0.34.2']
 USERNAME = "admin"
-PASSWORD = "Cisco123"
 MAX_WORKERS = 10   # concurrent version only
 ```
 
 - **ROUTERS**: one reachable IP per router. Two IPs on the same router will collect it twice and miss others.
-- **USERNAME / PASSWORD**: avoid committing real credentials. Prompting with `getpass` or reading an environment variable is safer.
 - **MAX_WORKERS**: how many routers the concurrent version connects to at the same time.
 
 ## Usage
