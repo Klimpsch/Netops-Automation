@@ -1,0 +1,73 @@
+devices:
+  R2:
+    interfaces:
+      GigabitEthernet1:
+        enabled: false
+      GigabitEthernet2:
+        ipv4: 10.0.12.2/30
+        enabled: true
+        ospf:
+          process: 1
+          area: 0
+      GigabitEthernet3:
+        ipv4: 10.0.23.1/30
+        enabled: true
+        ospf:
+          process: 1
+          area: 0
+      Loopback0:
+        ipv4: 2.2.2.2/32
+        enabled: true
+        ospf:
+          process: 1
+          area: 0
+  R3:
+    interfaces:
+      GigabitEthernet1:
+        enabled: false
+      GigabitEthernet2:
+        ipv4: 10.0.23.2/30
+        enabled: true
+        ospf:
+          process: 1
+          area: 0
+      GigabitEthernet3:
+        ipv4: 10.0.34.1/30
+        enabled: true
+        ospf:
+          process: 1
+          area: 0
+      GigabitEthernet4:
+        ipv4: 10.0.13.2/30
+        enabled: true
+        ospf:
+          process: 1
+          area: 0
+      Loopback0:
+        ipv4: 3.3.3.3/32
+        enabled: true
+        ospf:
+          process: 1
+          area: 0
+  R4:
+    interfaces:
+      GigabitEthernet1:
+        enabled: false
+      GigabitEthernet2:
+        ipv4: 10.0.34.2/30
+        enabled: true
+        ospf:
+          process: 1
+          area: 0
+      GigabitEthernet3:
+        ipv4: 10.0.41.1/30
+        enabled: true
+        ospf:
+          process: 1
+          area: 0
+      Loopback0:
+        ipv4: 4.4.4.4/32
+        enabled: true
+        ospf:
+          process: 1
+          area: 0
