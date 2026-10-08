@@ -1,10 +1,6 @@
-# Netops Automation
-
-Each tool lives in its own folder and can be used on its own. See the README inside each folder for full setup and usage details.
-i
 # Network Automation Toolkit
 
-A collection of Python and Ansible tools for automating everyday network engineering tasks: pulling data from devices, checking configs against standards, building a source of truth, and doing the routing maths.
+A collection of Python tools for automating everyday network engineering tasks: pulling data from devices, checking configs against standards, building a source of truth, and doing the routing maths.
 
 Each tool lives in its own folder and can be used on its own. See the README inside each folder for full setup and usage details.
 
